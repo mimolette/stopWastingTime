@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Stop wating time{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+
+        <link rel="stylesheet" type="text/css" href="{{ asset("vendor/semantic/dist/semantic.min.css") }}"/>
+        <link rel="icon" type="image/x-icon" href="{{ asset("favicon.ico") }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+
+    {# dépendances #}
+    <script src="{{ asset("vendor/jquery/dist/jquery.min.js") }}"></script>
+    <script src="{{ asset("vendor/semantic/dist/semantic.min.js") }}"></script>
+    <script src="{{ asset("bundles/menubase/js/EventEmitter.js") }}"></script>
+    {% block javascripts %}{% endblock %}
+</html>

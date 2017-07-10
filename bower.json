@@ -1,0 +1,21 @@
+
+{
+  "name": "stop-wasting-time",
+  "description": "",
+  "main": "",
+  "license": "",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "semantic": "semantic-ui#^2.2.1"
+  }
+}

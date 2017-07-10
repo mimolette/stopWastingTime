@@ -1,0 +1,4 @@
+app:
+    resource: '@MenuBaseBundle/Controller/'
+    type: annotation
+    prefix: /
