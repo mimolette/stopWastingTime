@@ -21,7 +21,6 @@
 /web/js/
 /web/bundles/
 web/vendor/
-excel/
 *.orig
 web/upload/
 web/assets/
@@ -36,6 +35,4 @@ app/bootstrap.php.cache
 /app/phpunit.xml
 bin/symfony_requirements
 tests/
-/composer.json
-var/
 *~
