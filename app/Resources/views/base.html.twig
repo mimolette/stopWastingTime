@@ -2,14 +2,73 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Stop wating time{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
 
         <link rel="stylesheet" type="text/css" href="{{ asset("vendor/semantic/dist/semantic.min.css") }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset("bundles/menubase/css/base.css") }}"/>
         <link rel="icon" type="image/x-icon" href="{{ asset("favicon.ico") }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="ui secondary pointing menu blue" id="topMenu">
+            <div class="left-menu">
+                <a class="logo-blk mini"
+                   href="#">
+                    MF
+                </a>
+                <div class="logo-blk">
+                    MENU FACTORY
+                </div>
+            </div>
+            <div class="module-choix">
+                <a class="item {% block home_active %}{% endblock %}"
+                   href="#">
+                    <i class="large home icon"></i>
+                </a>
+                <a href="#" class="item">Test 1</a>
+                <a href="#" class="item">Test 2</a>
+                <a href="#" class="item">Test 3</a>
+            </div>
+            <div class="right-menu">
+                {% block right_menu %}{% endblock %}
+                <a class="item" href="#">
+                    <i class="large log out icon popup" data-content="Déconnexion"></i>
+                </a>
+            </div>
+        </div>
+        <div id="topSubMenu">
+            <div class="sub-menu-items">
+                {% block sous_menu %}{% endblock %}
+            </div>
+            <div class="user-info">
+                {% if app.user %}
+                    {{ app.user.displayName }}
+                {% endif %}
+            </div>
+        </div>
+        <div id="topMessageContainer">
+            {% block message %}{% endblock %}
+            {% for type, messages in app.session.flashBag.all %}
+                {% for message in messages %}
+                    {% if type in ["success", "error", "info"] %}
+                        <div class="flash-message {{ type }}">
+                            {{ message|e }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="ui container" id="mainContainer">
+            <div id="titrePageBlock">
+                <div class="header">{% block titre_page %}{% endblock %}</div>
+                <div class="titre-btn-block">{% block titre_bouton %}{% endblock %}</div>
+            </div>
+            {% block divider %}<div class="ui clearing divider"></div>{% endblock %}
+            {% block body %}{% endblock %}
+            {% block modal %}{% endblock %}
+        </div>
     </body>
 
     {# dépendances #}

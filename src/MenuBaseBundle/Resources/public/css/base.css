@@ -1,0 +1,167 @@
+@media only screen and (min-width: 768px) {
+    #topMenu .logo-blk:not(.mini) {
+        display: block !important;
+    }
+
+    #topMenu .logo-blk.mini {
+        display: none;
+    }
+}
+
+#topMenu .logo-blk {
+    font-size: 3.5em;
+    padding: 0 0.8em 0 0.25em;
+    color: #b0b0b0;
+    font-weight: bold;
+}
+
+#topMenu .logo-blk:not(.mini) {
+    display: none;
+}
+
+#topMenu {
+    background-color: #f9f9f9;
+    display: flex !important;
+    flex-direction: row !important;
+    margin-bottom: 0 !important;
+}
+
+#topMenu .large.home.icon {
+    margin-right: 0 !important;
+}
+
+#topMenu > .left-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 450px;
+}
+
+#topMenu > .right-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 450px;
+}
+
+#topMenu > .module-choix {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    font-size: 1.05em;
+    flex-grow: 1;
+}
+
+#topMenu > .module-choix > a {
+    color: #afafaf !important;
+}
+
+#topMenu > .module-choix > .disabled {
+    color: #e1e1e1 !important;
+}
+
+#topMenu > .module-choix > .disabled:hover {
+    cursor: default !important;
+    color: #e1e1e1 !important;
+}
+
+#topMenu > .module-choix > .item:not(.disabled):hover {
+    color: #3f3f3f !important;
+    border-color: #3f3f3f !important;
+}
+
+#topSubMenu {
+    padding: 0.4em 0 0.4em 0;
+    background-color: #f3f3f3;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch;
+    margin-bottom: 1em !important;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+#topSubMenu > .sub-menu-items {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+}
+
+#topSubMenu > .user-info {
+    color: #9c9c9c;
+    font-style: italic;
+}
+
+#topMessageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.flash-message {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    margin-top: -1em;
+    margin-bottom: 1em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.flash-message:hover {
+    cursor: pointer;
+}
+
+.flash-message.success {
+    color: #2C662D;
+    background-color: #e9ffee;
+    border-color: #cbe1d0;
+}
+
+.flash-message.info {
+    color: #276F86;
+    background-color: #e6fcff;
+    border-color: #b8dae4;
+}
+
+.flash-message.error {
+    color: #d22726;
+    background-color: #ffe5e5;
+    border-color: #e7bebe;
+}
+
+.flash-message.warning {
+    color: orangered;
+    background-color: rgba(255, 69, 0, 0.20);
+    border-color: #e0bd91;
+}
+
+#titrePageBlock {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    margin-bottom: 0.8em;
+}
+
+#titrePageBlock > .header {
+    display: flex !important;
+    align-self: stretch !important;
+    align-items: center !important;
+    flex-grow: 1 !important;
+    font-size: 1.18em;
+    color: #4b4b4b;
+    font-weight: bold;
+}
+
+#titrePageBlock > .header > .ui.label {
+    margin-left: 0.5em;
+}
+
+#titrePageBlock > .titre-btn-block {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
